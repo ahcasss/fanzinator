@@ -1,0 +1,49 @@
+
+@gris50: rgb(128,128,128);
+@gris75: rgb(192,192,192);
+
+body{
+  background-color: @gris50;
+  margin: 0;
+}
+
+@print{
+
+  size: a4 landscape;
+
+  .pagina{
+    height: 100%;
+    width: 50%;
+  }
+}
+
+.carilla{
+  page-break-after: always;
+}
+
+.pagina{
+  width: 50%;
+}
+
+#div-menu{
+
+  padding: 25px;
+  background-color: @gris75;
+  position: fixed;
+  width: 15%;
+  left: -13%;
+  top: 25px;
+
+  button{
+    width: 50%;
+  }
+
+  &:hover{
+    left: 0;
+    transition: 0.25s;
+  }
+
+  &.oculto{
+    display: none;
+  }
+}
