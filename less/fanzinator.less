@@ -2,23 +2,19 @@
 @gris50: rgb(128,128,128);
 @gris75: rgb(192,192,192);
 
+@page{
+  margin: 0;
+  size: a4 landscape;
+}
+
 body{
   background-color: @gris50;
   margin: 0;
 }
 
-@print{
-
-  size: a4 landscape;
-
-  .pagina{
-    height: 100%;
-    width: 50%;
-  }
-}
-
 .carilla{
-  page-break-after: always;
+  page-break-inside: avoid;
+  //page-break-after: always;
 }
 
 .pagina{
@@ -33,6 +29,7 @@ body{
   width: 15%;
   left: -13%;
   top: 25px;
+  transition: 0.25s;
 
   button{
     width: 50%;
@@ -46,4 +43,5 @@ body{
   &.oculto{
     display: none;
   }
+
 }
