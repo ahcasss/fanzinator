@@ -109,7 +109,7 @@ function ordenarImpresion(){
   while(izquierda < derecha){
 
     if(i % 2 == 0){
-      carilla = document.createElement("carilla");
+      carilla = document.createElement("div");
       carilla.className = "carilla";
       divPaginas.appendChild(carilla);
     }
@@ -145,7 +145,7 @@ function ordenarLectura(){
   for(i = 0; i < paginas.length; i++){
 
     if(i % 2 == 0){
-      carilla = document.createElement("carilla");
+      carilla = document.createElement("div");
       carilla.className = "carilla";
       divPaginas.appendChild(carilla);
     }
@@ -174,7 +174,7 @@ function imprimir(){
 }
 
 function quitarClase(element,className){
-  element.className = element.className.replace(" "+className,"");
+  element.className = element.className.replace(className,"");
 }
 
 function agregarClase(element,className){
