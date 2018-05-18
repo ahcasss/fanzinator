@@ -30,10 +30,10 @@ body{
     .carilla{
       margin-bottom: 10px;
       height: 100vh;
-      width: 70.71vw;
+      width: 141.41vh;
       .pagina{
         width: 50%;
-        height: auto;
+        height: 100%;
       }
       &:last-child{
         margin-bottom: 0;
@@ -43,6 +43,8 @@ body{
 
   .carilla{
     display: flex;
+    align-items: center;
+    justify-content: space-evenly;
     margin-bottom: 0;
     page-break-inside: avoid;
     //page-break-after: always;
@@ -52,17 +54,20 @@ body{
       width: 50%;
       height: 100%;
       animation-name: pagina-entrar;
-      animation-duration: 1s;
+      animation-duration: 0.5s;
     }
   }
 }
 
 @keyframes pagina-entrar {
   0%{
-    opacity: 0;
+    //opacity: 0;
+    width: 0;
+    height: 0;
   }
   100%{
-    opacity: 1;
+    width: 50%;
+    height: 100%;
   }
 }
 
