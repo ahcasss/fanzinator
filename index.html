@@ -6,12 +6,14 @@
   </head>
   <body>
     <div id="div-menu">
-      <input id="input-imagenes" type="file" multiple>
-      <button type="button" id="btn-orden-lectura" disabled>Lectura</button>
-      <button type="button" id="btn-orden-impresion">Impresion</button>
+      <label id="btn-imagenes">
+        <span>Las p&aacute;ginas...</span>
+        <input id="input-imagenes" type="file" multiple style="display:none">
+      </label>
+      <button type="button" id="btn-orden-lectura" disabled>Lectura</button><button type="button" id="btn-orden-impresion">Impresion</button>
       <button type="button" id="btn-imprimir">Imprimir</button>
     </div>
-    <div id="div-paginas">
+    <div id="div-paginas" class="marco">
     </div>
   </body>
 </html>

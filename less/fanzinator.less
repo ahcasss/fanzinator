@@ -1,4 +1,5 @@
-
+@gris125: rgb(32,32,32);
+@gris375: rgb(96,96,96);
 @gris50: rgb(128,128,128);
 @gris75: rgb(192,192,192);
 
@@ -7,18 +8,46 @@
   size: a4 landscape;
 }
 
+*{
+  font-family: Noto sans;
+}
+
 body{
   background-color: @gris50;
   margin: 0;
+  text-align: center;
+}
+
+#div-paginas.marco{
+  .carilla{
+    margin-top: 25px;
+    .pagina{
+      margin-left: 5%;
+      width: 42.5%;
+    }
+  }
 }
 
 .carilla{
+  display: block;
   page-break-inside: avoid;
   //page-break-after: always;
 }
 
 .pagina{
+  animation-name: pagina-entrar;
+  animation-duration: 1s;
   width: 50%;
+  border: 1px solid white;
+}
+
+@keyframes pagina-entrar {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
 }
 
 #div-menu{
@@ -30,9 +59,45 @@ body{
   left: -13%;
   top: 25px;
   transition: 0.25s;
+  z-index: 100;
 
   button{
+    width: 48%;
+    margin-bottom:3px;
+    .button;
+  }
+  label{
+    display:block;
     width: 50%;
+    margin-bottom:3px;
+    text-align: center;
+    font-size: 80%;
+  }
+  label#btn-imagenes{
+    .button;
+  }
+  #btn-orden-lectura,#btn-orden-impresion{
+    &:disabled{
+      color: @gris375;
+      background-color: @gris50;
+      &:hover{
+        border-color: transparent;
+      }
+    }
+  }
+  #btn-orden-lectura{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    &:hover{
+      border-right-color: transparent;
+    }
+  }
+  #btn-orden-impresion{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    &:hover{
+      border-left-color: transparent;
+    }
   }
 
   &:hover{
@@ -43,5 +108,14 @@ body{
   &.oculto{
     display: none;
   }
+}
+.button{
+  background-color: rgb(224,224,224);
+  padding: 2px;
+  border-radius: 2px;
+  border: 1px solid transparent;
 
+  &:hover{
+    border: 1px solid rgba(255,0,0,0.25);
+  }
 }

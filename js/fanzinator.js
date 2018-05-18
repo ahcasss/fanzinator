@@ -158,7 +158,8 @@ function imprimir(){
 
   var ordenPre = orden;
 
-  divMenu.className += " oculto";
+  agregarClase(divMenu," oculto");
+  quitarClase(divPaginas,"marco");
 
   ordenarImpresion();
 
@@ -168,7 +169,16 @@ function imprimir(){
     ordenarLectura();
   }
 
-  divMenu.className = divMenu.className.replace(" oculto","");
+  quitarClase(divMenu," oculto");
+  agregarClase(divPaginas,"marco");
+}
+
+function quitarClase(element,className){
+  element.className = element.className.replace(" "+className,"");
+}
+
+function agregarClase(element,className){
+  element.className += " "+className;
 }
 
 init();
