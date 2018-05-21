@@ -113,6 +113,9 @@ function ordenarImpresion(){
 
   orden = "impresion";
 
+  if(paginas == undefined)
+    return;
+
   limpiarPaginas();
 
   izquierda = 0;
@@ -150,6 +153,9 @@ function ordenarLectura(){
   btnOrdenImpresion.disabled = false;
 
   orden = "lectura";
+
+  if(paginas == undefined)
+    return;
 
   limpiarPaginas();
 
