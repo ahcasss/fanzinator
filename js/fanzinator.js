@@ -10,6 +10,8 @@ var orden;
 var btnOrdenLectura;
 var btnOrdenImpresion;
 var btnImprimir;
+var solapaMenu;
+var solapa;
 
 function init(){
 
@@ -31,6 +33,15 @@ function init(){
 
   btnImprimir = document.getElementById("btn-imprimir");
   btnImprimir.onclick = imprimir;
+
+  solapaMenu = document.getElementById("solapaMenu");
+  solapa = document.getElementById("solapa");
+  solapa.addEventListener("mouseenter", () => {
+    agregarClase(solapaMenu,"abierto");
+  });
+  solapaMenu.addEventListener("mouseleave",() => {
+    quitarClase(solapaMenu,"abierto");
+  });
 
 }
 
@@ -158,7 +169,7 @@ function imprimir(){
 
   var ordenPre = orden;
 
-  agregarClase(divMenu," oculto");
+  agregarClase(solapaMenu," oculto");
   quitarClase(divPaginas,"marco");
 
   ordenarImpresion();
@@ -169,7 +180,7 @@ function imprimir(){
     ordenarLectura();
   }
 
-  quitarClase(divMenu," oculto");
+  quitarClase(solapaMenu," oculto");
   agregarClase(divPaginas,"marco");
 }
 
