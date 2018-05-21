@@ -6,10 +6,19 @@
 @btn-bg: #dd7171;
 @btn-active: #594949;
 @menu-bg: #74596c;
+@bg-font-color: fade(#7546b1,30%);
 
 @font-face{
   font-family: snubnose;
   src: url("../fonts/snubnose.otf") format("opentype");
+}
+
+#footer{
+  font-size: 0.6em;
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  color: @bg-font-color;
 }
 
 #fanzinator{
@@ -19,7 +28,7 @@
   left: 50%;
   transform: translate(-50%,-50%);
   font-size: 10em;
-  color: #7546b14d;
+  color: @bg-font-color;
   font-weight: bolder;
   font-family: snubnose;
 }
